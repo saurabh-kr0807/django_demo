@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "7b8cdb79-178c-4925-a59f-aeadbc2e3e80",
+		"name": "djangoAPIDemo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CustomersList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/customers"
+			},
+			"response": []
+		},
+		{
+			"name": "CustomerDetails",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/customers/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Customers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"Amit\",\n    \"last_name\": \"Mohan\",\n    \"date_of_birth\": \"1995-04-01\",\n    \"phone_number\": \"7044335678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/customers/"
+			},
+			"response": []
+		},
+		{
+			"name": "CustomerUpdate",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"sumit\",\n    \"last_name\": \"Mohan\",\n    \"date_of_birth\": \"1995-05-01\",\n    \"phone_number\": \"1234567898\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/customers/1/update/"
+			},
+			"response": []
+		},
+		{
+			"name": "CustomerDelete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/customers/1/delete/"
+			},
+			"response": []
+		}
+	]
+}
